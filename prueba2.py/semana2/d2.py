@@ -1,0 +1,16 @@
+edad=int(input('podrias indicar cual es tu edad '))
+entrada= input('Cuentas con entrada para la funcion (si / no) ')
+print(          )
+print('hola bienvenido al cine')
+print(       )
+if (edad >= 18) and (entrada == 'si'):
+    print('con forme a los datos recolectados')
+    print('tu si puedes ingresar a esta funcion ')
+    print('que la disfrutes. ')
+    print(        )
+else:
+    print('con forme a los datos recolectados')
+    print('tu no puedes ingresar a esta funcion ')
+    print('te recomendamos puedas ver nuestra cartelera ')
+    print('y poder escoger otra funcion. ')
+    print(       )

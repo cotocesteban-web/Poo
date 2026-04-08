@@ -24,13 +24,12 @@ def lista_productos():
                 break 
 
         num_lote = int(codigo_ingresado[0])
-        cantidad_lote = int(codigo_ingresado[1:4])
-        lote_entregado = int(codigo_ingresado)
+        cantidad_lote = int(codigo_ingresado[1:3])
+        lote_entregado = int(codigo_ingresado[4])
+               
 
-
-        if num_lote < 1 or lote > 3:
-            print("dato invalido (codigo debe ser 1, 2 o 3):", dato)
-            continue
+        if lote_entregado < 0 or lote_entregado > 1:
+            print(f"Seleccione una opcion valida si fue entregado si: 1 , No: 0 {lote_entregado}")
 
         indice = codigo - 1
         lotes[indice] = lotes[indice] + 1

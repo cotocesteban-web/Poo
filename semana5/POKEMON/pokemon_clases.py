@@ -1,7 +1,8 @@
 import pokedex
+from abc import ABC, abstractmethod
 
-class Pokemon:
-    def __init__(self, nombre, hp_actual, hp_maximo, energia_actual, energia_maxima)
+class Pokemon(ABC):
+    def __init__(self, nombre, hp_actual, hp_maximo, energia_actual, energia_maxima):
         self.nombre = nombre
         self.hp_actual = hp_actual
         self.hp_maximo = hp_maximo
@@ -19,9 +20,11 @@ class Pokemon:
     @property
     def energia_actual(self):
         return self.energia_actual
-
-
+    
+    
 
 
 print(pokedex.mostrar_catalogo_disponible())
+
+
 

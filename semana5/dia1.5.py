@@ -2,7 +2,7 @@
 
 # Principio DRY: DO NOT REPEAT YOURSELF | NO TE REPITAS
 
-# miscor ejemplo de herencia
+# mismo ejemplo de herencia
 # class perro:
 #     def __init__(self, nombre):
 #         self.nombre = nombre

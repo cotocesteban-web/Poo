@@ -9,34 +9,66 @@ class Pokemon(ABC):
         self.energia_actual = energia_actual
         self.energia_maxima = energia_maxima
 
+   ## funciones del padre
+    def defender(self):
+        if self.energia_actual >= 5:
+            self.energia_actual -= 5
+            self.defendiendo = True
+            print(f"{self.nombre} se defiende.")
+        else:
+            print("No hay energia suficiente.")
+ #####funcion descanaar
+    def descansar(self):
+        self.energia_actual += 20
+        print(f"{self.nombre} descansa y recupera energía.")
+
+    def recibir_daño(self, daño):
+        if self.defendiendo:
+            daño = daño // 2
+            self.defendiendo = False
+        self.hp_actual -= daño
+        print(f"{self.nombre} recibe {daño} de daño.")
+
+    # MÉTODO ABSTRACTO
+    @abstractmethod
+    def atacar(self, oponente):
+        pass
+
+
+        pass
 ## Aca se define que las propiedades sean privadas
     @property
     def hp_actual(self):
         return self.__hp_actual
-
-    @property
-    def hp_maximo(self):
-        return self.__hp_maximo
     
-    @hp_maximo.setter
-    def hp_maxino(self,valor):
-        self.hp_maximo = valor
+    @hp_actual.setter:
+    def hp_actual(self_valor):
+    
 
     @property
     def energia_actual(self):
         return self.energia_actual
     
-    @property
-    def energia_maxima(self):
-        return self.energia_maxima
-    
-    @energia_maxima.setter:
-    def energia_maxima(self, valor):
-        self.energia_maxima = valor
+    @energia_actual.setter
+    def energia_actual(self, valor):
 
-    def @abstractmethod
 
-class PokemonAgua:
+   
+class PokemonAgua(Pokemon):
+    def __init__(self, nombre, hp_maximo, energia_maxima):
+        super().__init__(nombre, hp_maximo, energia_maxima)
+
+    def atacar(self, oponente):
+        if self.energia_actual < 15:
+            print("No hay energa suficiente.")
+            return
+
+        self.energia_actual -= 15
+        daño = 10
+
+
+
+
 
     
 

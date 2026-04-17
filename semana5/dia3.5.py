@@ -117,44 +117,44 @@
 # ### Pendiente de terminar con exeept y try
 # from abc import ABC, abstractmethod
 
-# # 1. La plantilla (Clase Abstracta)
-# class Trabajador(ABC):
-#     def __init__(self, nombre):
-#         self.nombre = nombre
+# 1. La plantilla (Clase Abstracta)
+class Trabajador(ABC):
+    def __init__(self, nombre):
+        self.nombre = nombre
 
-#     @abstractmethod
-#     def realiza_tarea(self):
-#         pass
+    @abstractmethod
+    def realiza_tarea(self):
+        pass
 
-# # 2. Clase Ingeniero
-# class Ingeniero(Trabajador):
-#     def realiza_tarea(self):
-#         print(f"👷 {self.nombre} está diseñando planos.")
+# 2. Clase Ingeniero
+class Ingeniero(Trabajador):
+    def realiza_tarea(self):
+        print(f"{self.nombre} está diseñando planos.")
 
-# # 3. Clase Medico (¡Aquí está el que necesitabas!)
-# class Medico(Trabajador):
-#     def realiza_tarea(self):
-#         print(f"⚕️ {self.nombre} está atendiendo pacientes.")
+# 3. Clase Medico (¡Aquí está el que necesitabas!)
+class Medico(Trabajador):
+    def realiza_tarea(self):
+        print(f"{self.nombre} está atendiendo pacientes.")
 
-# # --- PRUEBAS ---
+# --- PRUEBAS ---
 
-# # Creamos al ingeniero
-# inge = Ingeniero("Carlos")
-# inge.realiza_tarea()
+# Creamos al ingeniero
+inge = Ingeniero("Carlos")
+inge.realiza_tarea()
 
-# # Creamos al médico
-# doc = Medico("Dra. Elena")
-# doc.realiza_tarea()
+# Creamos al médico
+doc = Medico("Dra. Elena")
+doc.realiza_tarea()
 
-# print("-" * 30)
+print("-" * 30)
 
-# # Intento inválido (para probar el try/except)
-# try: 
-#     print("Intentando crear un trabajador genérico...")
-#     alguien = Trabajador("Persona X")
-# except: 
-#     print("❌ ERROR: No se puede crear un 'Trabajador' directamente.")
-#     print("Debes usar una profesión específica (Ingeniero o Medico).")
+# Intento inválido (para probar el try/except)
+try: 
+    print("Intentando crear un trabajador genérico...")
+    alguien = Trabajador("Persona X")
+except: 
+    print("ERROR: No se puede crear un 'Trabajador' directamente.")
+    print("Debes usar una profesión específica (Ingeniero o Medico).")
 
 
 

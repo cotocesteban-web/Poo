@@ -34,8 +34,6 @@ class Pokemon(ABC):
     def atacar(self, oponente):
         pass
 
-
-        pass
 ## Aca se define que las propiedades sean privadas
     @property
     def hp_actual(self):
